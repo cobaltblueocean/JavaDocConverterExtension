@@ -1,18 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="JavaDocConverterExtension.d028cf92-b9c3-47dd-b976-29ef3908d63d" Version="1.0" Language="en-US" Publisher="Kei Nakai" />
+        <Identity Id="b0608a7b-9d20-4357-9cfb-a242e2148bd8" Version="1.0" Language="en-US" Publisher="Kei Nakai" />
         <DisplayName>JavaDoc Converter Extension</DisplayName>
-        <Description xml:space="preserve">Code document converter extension from JavaDoc to XML DocumentCode </Description>
+        <Description xml:space="preserve">Code document converter extension from JavaDoc to XML DocumentCode</Description>
     </Metadata>
-    <Installation AllUsers="true">
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0, )" />
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
     </Installation>
     <Dependencies>
-        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.7.2,)" />
     </Dependencies>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
     </Prerequisites>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />

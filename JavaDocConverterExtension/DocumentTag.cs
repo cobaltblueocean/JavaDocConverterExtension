@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JavaDocConverterExtension
+namespace JavaDocConverterExtension2
 {
     public class DocumentTag
     {
@@ -71,7 +71,7 @@ namespace JavaDocConverterExtension
 
         public static DocumentTag Get(int ordinal)
         {
-            switch(ordinal)
+            switch (ordinal)
             {
                 case 0:
                     return CommentBase;
@@ -105,6 +105,5 @@ namespace JavaDocConverterExtension
             _deleteLine = deleteLine;
             _needCloseTag = needCloseTag;
         }
-
     }
 }

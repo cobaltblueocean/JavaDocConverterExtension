@@ -1,8 +1,9 @@
-﻿using Task = System.Threading.Tasks.Task;
+﻿using System;
+using Task = System.Threading.Tasks.Task;
 using Microsoft.VisualStudio.TextManager.Interop;
 using EnvDTE;
 
-namespace JavaDocConverterExtension
+namespace JavaDocConverterExtension2
 {
     public struct TextViewSelection
     {
@@ -82,7 +83,7 @@ namespace JavaDocConverterExtension
         public static async System.Threading.Tasks.Task<TextViewSelection> GetSelectionAsync(Microsoft.VisualStudio.Shell.IAsyncServiceProvider serviceProvider)
         {
             var service = serviceProvider.GetServiceAsync(typeof(SVsTextManager));
-            var textManager = await Task.Run(() => service)as IVsTextManager2;
+            var textManager = await Task.Run(() => service) as IVsTextManager2;
             IVsTextView view;
             int result = textManager.GetActiveView2(1, null, (uint)_VIEWFRAMETYPE.vftCodeWindow, out view);
 
@@ -99,11 +100,10 @@ namespace JavaDocConverterExtension
         public static async System.Threading.Tasks.Task<string> GetActiveDocumentFilePathAsync(Microsoft.VisualStudio.Shell.IAsyncServiceProvider serviceProvider)
         {
             var service = serviceProvider.GetServiceAsync(typeof(DTE));
-            EnvDTE80.DTE2 applicationObject = await Task.Run(() => service)as EnvDTE80.DTE2;
+            EnvDTE80.DTE2 applicationObject = await Task.Run(() => service) as EnvDTE80.DTE2;
 
             await Microsoft.VisualStudio.Shell.ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
             return applicationObject.ActiveDocument.FullName;
         }
-
     }
 }

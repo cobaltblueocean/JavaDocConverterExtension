@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.Shell;
+using System;
 using System.ComponentModel.Design;
-using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
 
-namespace JavaDocConverterExtension
+namespace JavaDocConverterExtension2
 {
     /// <summary>
     /// Command handler
@@ -18,7 +18,7 @@ namespace JavaDocConverterExtension
         /// <summary>
         /// Command menu group (command set GUID).
         /// </summary>
-        public static readonly Guid CommandSet = new Guid("2645b179-9907-43d7-9cf7-6d4b9e475bdc");
+        public static readonly Guid CommandSet = new Guid("0fafb3fd-4d9c-43c7-b904-447ae82fde54");
 
         /// <summary>
         /// VS Package that provides this command, not null.
@@ -71,7 +71,7 @@ namespace JavaDocConverterExtension
             // the UI thread.
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(package.DisposalToken);
 
-            OleMenuCommandService commandService = await package.GetServiceAsync((typeof(IMenuCommandService))) as OleMenuCommandService;
+            OleMenuCommandService commandService = await package.GetServiceAsync(typeof(IMenuCommandService)) as OleMenuCommandService;
             Instance = new JavaDocConverterCommand(package, commandService);
         }
 
@@ -103,5 +103,6 @@ namespace JavaDocConverterExtension
             string activeDocumentPath = await TextViewSelectionUtility.GetActiveDocumentFilePathAsync(ServiceProvider);
             //ShowAddDocumentationWindow(activeDocumentPath, selection);
         }
+
     }
 }

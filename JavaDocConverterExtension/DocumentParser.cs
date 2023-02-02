@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
 using Microsoft.VisualStudio.TextManager.Interop;
 using Microsoft.VisualStudio.Threading;
 using EnvDTE;
 
-namespace JavaDocConverterExtension
+namespace JavaDocConverterExtension2
 {
     public class DocumentParser
     {
@@ -254,14 +253,14 @@ namespace JavaDocConverterExtension
         public async Task<EnvDTE80.DTE2> GetDTEAsync()
         {
             var service = _serviceProvider.GetServiceAsync(typeof(DTE));
-            EnvDTE80.DTE2 applicationObject = await Task.Run(() => service)as EnvDTE80.DTE2;
+            EnvDTE80.DTE2 applicationObject = await Task.Run(() => service) as EnvDTE80.DTE2;
             return applicationObject;
         }
 
         public async Task<string> GetSelectedTextAsync()
         {
             var service = _serviceProvider.GetServiceAsync(typeof(SVsTextManager));
-            var textManager = await Task.Run(() => service)as IVsTextManager2;
+            var textManager = await Task.Run(() => service) as IVsTextManager2;
             IVsTextView view;
             int result = textManager.GetActiveView2(1, null, (uint)_VIEWFRAMETYPE.vftCodeWindow, out view);
 

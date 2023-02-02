@@ -1,23 +1,8 @@
 ﻿using System;
-using System.ComponentModel.Design;
-using System.Globalization;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
-using Task = System.Threading.Tasks.Task;
 using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.ComTypes;
+using System.Text.RegularExpressions;
 
-using Microsoft.VisualStudio.Utilities;
-using Microsoft.VisualStudio.TextManager.Interop;
-using Microsoft.VisualStudio.OLE.Interop;
-using System.Diagnostics;
-using EnvDTE;
-
-namespace JavaDocConverterExtension
+namespace JavaDocConverterExtension2
 {
     using IBindCtx = System.Runtime.InteropServices.ComTypes.IBindCtx;
     using Process = System.Diagnostics.Process;
