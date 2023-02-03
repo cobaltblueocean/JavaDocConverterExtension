@@ -3,7 +3,7 @@ using System;
 using System.ComponentModel.Design;
 using Task = System.Threading.Tasks.Task;
 
-namespace JavaDocConverterExtension2
+namespace JavaDocConverterExtension
 {
     /// <summary>
     /// Command handler

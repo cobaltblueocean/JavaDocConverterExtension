@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Task = System.Threading.Tasks.Task;
 
-namespace JavaDocConverterExtension2
+namespace JavaDocConverterExtension
 {
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.
@@ -29,7 +29,7 @@ namespace JavaDocConverterExtension2
     public sealed class JavaDocConverterExtensionPackage : AsyncPackage
     {
         /// <summary>
-        /// JavaDocConverterExtension2Package GUID string.
+        /// JavaDocConverterExtensionPackage GUID string.
         /// </summary>
         public const string PackageGuidString = "218312b9-676e-4b96-ae36-e0e8ae907d3c";
 

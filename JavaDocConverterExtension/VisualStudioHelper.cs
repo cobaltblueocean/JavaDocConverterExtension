@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
-namespace JavaDocConverterExtension2
+namespace JavaDocConverterExtension
 {
     using IBindCtx = System.Runtime.InteropServices.ComTypes.IBindCtx;
     using Process = System.Diagnostics.Process;

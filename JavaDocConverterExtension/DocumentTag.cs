@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JavaDocConverterExtension2
+namespace JavaDocConverterExtension
 {
     public class DocumentTag
     {

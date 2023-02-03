@@ -13,8 +13,8 @@
     <ProjectGuid>{D1B70D7B-1E7B-4CD1-85A2-659CA8CF0EF3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JavaDocConverterExtension2</RootNamespace>
-    <AssemblyName>JavaDocConverterExtension2</AssemblyName>
+    <RootNamespace>JavaDocConverterExtension</RootNamespace>
+    <AssemblyName>JavaDocConverterExtension</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <UseCodebase>true</UseCodebase>

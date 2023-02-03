@@ -3,7 +3,7 @@ using Task = System.Threading.Tasks.Task;
 using Microsoft.VisualStudio.TextManager.Interop;
 using EnvDTE;
 
-namespace JavaDocConverterExtension2
+namespace JavaDocConverterExtension
 {
     public struct TextViewSelection
     {

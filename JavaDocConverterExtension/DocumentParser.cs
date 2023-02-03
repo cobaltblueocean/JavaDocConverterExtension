@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TextManager.Interop;
 using Microsoft.VisualStudio.Threading;
 using EnvDTE;
 
-namespace JavaDocConverterExtension2
+namespace JavaDocConverterExtension
 {
     public class DocumentParser
     {
