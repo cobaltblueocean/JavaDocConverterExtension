@@ -15,20 +15,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)JavaDocConverterExtensionPackage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TextViewSelection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)VisualStudioHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)VSPackage.Designer.cs">
-      <DependentUpon>VSPackage.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Key.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)VSPackage.resx">
-      <LastGenOutput>VSPackage.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

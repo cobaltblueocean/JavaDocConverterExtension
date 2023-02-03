@@ -4,6 +4,7 @@
         <Identity Id="b0608a7b-9d20-4357-9cfb-a242e2148bd8" Version="1.0" Language="en-US" Publisher="Kei Nakai" />
         <DisplayName>JavaDoc Converter Extension</DisplayName>
         <Description xml:space="preserve">Code document converter extension from JavaDoc to XML DocumentCode</Description>
+        <Icon>JavaDocConverterCommandPackage.png</Icon>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
