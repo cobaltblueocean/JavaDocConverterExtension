@@ -94,6 +94,7 @@ namespace JavaDocConverterExtension
                 await Microsoft.VisualStudio.Shell.ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
                 var documentParser = new DocumentParser(ServiceProvider);
                 await documentParser.ParseDocumentAsync();
+                await documentParser.UpdateImportDeclarationAsync();
             }
         }
 

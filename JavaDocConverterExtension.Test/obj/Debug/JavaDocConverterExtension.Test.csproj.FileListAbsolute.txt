@@ -1,0 +1,14 @@
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\bin\Debug\JavaDocConverterExtension.Test.dll
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\bin\Debug\JavaDocConverterExtension.Test.pdb
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\obj\Debug\JavaDocConverterExtension.Test.csproj.AssemblyReference.cache
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\obj\Debug\JavaDocConverterExtension.Test.csproj.CoreCompileInputs.cache
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\obj\Debug\JavaDocConverterExtension.Test.csproj.CopyComplete
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\obj\Debug\JavaDocConverterExtension.Test.dll
+C:\Users\Mercury21\Source\Repos\JavaDocConverterExtension\JavaDocConverterExtension.Test\obj\Debug\JavaDocConverterExtension.Test.pdb

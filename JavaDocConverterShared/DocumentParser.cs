@@ -14,6 +14,7 @@ namespace JavaDocConverterExtension
         public int vsFindOptionsRegularExpression = 8;
 
         private Microsoft.VisualStudio.Shell.IAsyncServiceProvider _serviceProvider;
+        private readonly String InsertDeclaration = "insert ";
 
         public DocumentParser(Microsoft.VisualStudio.Shell.IAsyncServiceProvider serviceProvider)
         {
@@ -240,6 +241,83 @@ namespace JavaDocConverterExtension
         {
             Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
             var result = selection.FindText(DocumentTag.CommentBaseEnd.JavaDocTag, vsFindOptionsNone);
+            Index = selection.CurrentLine;
+
+            return result;
+        }
+        public async Task UpdateImportDeclarationAsync()
+        {
+            if (Microsoft.VisualStudio.Shell.ThreadHelper.CheckAccess())
+            {
+                await Microsoft.VisualStudio.Shell.ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
+                var dte = await GetDTEAsync();
+                var activeDocument = await GetActiveDocumentAsync();
+
+                var selection = activeDocument.Selection as TextSelection;
+                selection.StartOfDocument(false);
+                selection.EndOfLine(true);
+
+                int beginIndex = GetFirstInsertDeclarationIndex(ref selection);
+                int endIndex = GetLastInsertDeclarationIndex(ref selection);
+
+                if (beginIndex > -1)
+                {
+                    for (int i = beginIndex; i <= endIndex; i++)
+                    {
+                        selection.GotoLine(i, true);
+                        String text = selection.Text;
+
+                        var buf = text.Split(' ')[1].Split('.');
+                        buf[buf.Length - 1] = "";
+                        var tmp = "Using " + String.Join(".", buf) + ";";
+                        selection.Text = tmp.Replace(".;", ";");
+                    }
+
+                    for (int i = beginIndex; i <= endIndex; i++)
+                    {
+                        selection.GotoLine(i, true);
+                        String entry1 = selection.Text;
+
+                        for (int j = beginIndex; j <= endIndex; j++)
+                        {
+                            selection.GotoLine(j, true);
+                            String entry2 = selection.Text;
+                            if ((i != j) && (entry1 == entry2))
+                                selection.Text = "";
+                        }
+                    }
+                }
+            }
+        }
+
+        private int GetFirstInsertDeclarationIndex(ref TextSelection selection)
+        {
+            Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+            int Index = 0;
+            if (!FindInsertDeclaration(ref selection, out Index))
+            {
+                Index = -1;
+            }
+            return Index;
+        }
+
+        private int GetLastInsertDeclarationIndex(ref TextSelection selection)
+        {
+            Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+            int Index = 0;
+            Boolean result = true;
+
+            while (result)
+            {
+                result = FindInsertDeclaration(ref selection, out Index);
+            }
+            return Index;
+        }
+
+        private Boolean FindInsertDeclaration(ref TextSelection selection, out int Index)
+        {
+            Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+            var result = selection.FindText(InsertDeclaration, vsFindOptionsNone);
             Index = selection.CurrentLine;
 
             return result;

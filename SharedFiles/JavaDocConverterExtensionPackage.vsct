@@ -72,7 +72,7 @@
     </Bitmaps>
   </Commands>
 
-  <Symbols>
+	<Symbols>
     <!-- This is the package guid. -->
     <GuidSymbol name="guidJavaDocConverterExtensionPackage" value="{218312b9-676e-4b96-ae36-e0e8ae907d3c}" />
 
